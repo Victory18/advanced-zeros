@@ -1,5 +1,5 @@
 module.exports = function getZerosCount(number, base) {
-  function factorial(number) {
+  function factorial() {
     var result = 1;
     for (var i = 1; i <= number; i++) {
       result *= i;
