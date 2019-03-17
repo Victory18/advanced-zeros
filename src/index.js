@@ -3,6 +3,6 @@ module.exports = function getZerosCount(number, base) {
     for (var i = 1; i <= number; i++) {
       result *= i;
     }
-    return +result.toString(base);
+    return result.toString(base).length - result.toString(base).split('').reverse().join('').length;
 
 }
