@@ -9,7 +9,7 @@ module.exports = function getZerosCount(number, base) {
   } while (number != 0);
 
   var newNumber = arr.reverse().join('');
-  var zeros = newNumber.match(/[05]/g).length;
+  var zeros = newNumber.match(/[05]/g);
 
-  return zeros;
+  return zeros.length;
 }
