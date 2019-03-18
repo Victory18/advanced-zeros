@@ -21,11 +21,11 @@ for (var i = 1; i <= number; i++) {
   fact = fact * i;
 }
 
-while (fact != 0) {
+do {
   el = fact % base;
   arr.push(el);
   fact = Math.floor(fact / base);
-  } 
+  } while (fact != 0)
 
 var newNumber = arr.reverse().join('');
 
