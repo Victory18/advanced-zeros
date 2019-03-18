@@ -17,4 +17,5 @@ module.exports = function getZerosCount(number, base) {
     }
     return count;
   }
+return zeros;
 }
