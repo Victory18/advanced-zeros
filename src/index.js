@@ -22,7 +22,7 @@ for (var i = 1; i <= number; i++) {
 }
 
 do {
-  el = Math.floor(fact) % base;
+  el = fact % base;
   arr.push(el);
   fact = fact / base;
   } while (fact != 0);
