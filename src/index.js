@@ -1,10 +1,15 @@
 module.exports = function getZerosCount(number, base) {
   var arr = [];
-  for (var i = 1; i <= number; i++) {
-    arr.push[i];
-  }
+  var el = 0;
 
-   var zeros = arr.join('').match(/[05]/g).length;
+  do {
+    el = number % base;
+    arr.push(el);
+    number = Math.floor(number / base)
+  } while (number != 0);
 
-   return zeros;
+  var newNumber = arr.reverse().join('');
+  var zeros = newNumber.match(/[05]/g).length;
+
+  return zeros;
 }
