@@ -11,7 +11,7 @@ module.exports = function getZerosCount(number, base) {
   var newNumber = +arr.reverse().join('');
   var count = 0;
  
-  for (var i = 5; newNumber / i > 0; i += 5) {
+  for (var i = 5; i < newNumber; i += 5) {
     while (newNumber >= i) {
       count ++;
     }
