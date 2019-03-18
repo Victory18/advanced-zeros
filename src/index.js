@@ -24,7 +24,7 @@ for (var i = 1; i <= number; i++) {
 do {
   el = fact % base;
   arr.push(el);
-  fact = fact / base;
+  fact = Math.floor(fact / base);
   } while (fact != 0);
 
 var newNumber = arr.reverse().join('');
