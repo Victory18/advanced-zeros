@@ -27,12 +27,7 @@ do {
   fact = Math.floor(fact / base);
   } while (fact != 0);
 
-var newNumber = arr.reverse().join('');
-
-for (var j = 1; j < newNumber.length; j++) {
-  var zero = newNumber.substr(newNumber.length - j);
-  if (zero == 0) count++;
-}
+var count = + arr.reverse().join('') - (+arr.join(''));
 
 return count;
 
