@@ -9,7 +9,12 @@ module.exports = function getZerosCount(number, base) {
   } 
 
   var newNumber = +arr.reverse().join('');
-  var count = Math.floor(newNumber / 5);
+  var count = 0;
+ 
+  for (var i = 5; n / i > 0; i += 5) {
+    if (newNumber >= i) count ++;
+    else break;
+  }
  
 return count;
 }
