@@ -9,13 +9,10 @@ module.exports = function getZerosCount(number, base) {
   } while (number != 0);
 
   var newNumber = +arr.reverse().join('');
-  var zeros = (newNumber) => {
-    var count = 0;
-    while (newNumber) {
-      newNumber = newNumber / 5 | 0;
-      count += newNumber;
-    }
-    return count;
+  var count = 0;
+  while (newNumber) {
+    newNumber = newNumber / 5 | 0;
+    count += newNumber;
   }
-return zeros;
+  return count;
 }
