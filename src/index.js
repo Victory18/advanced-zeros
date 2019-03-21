@@ -9,18 +9,16 @@ module.exports = function getZerosCount(number, base) {
   return result;
   }
 
-  var primeNumbers =[];
+  var primeNumbers = [];
   
 
-  for (var i = 2; i <= Math.sqrt(base); i++) {
-   
+  for (var i = 2; i*i <= base; i++) {
+    if (base % i != 0) continue;
     var p = 0;
     while (base % i == 0) {
       p++;
       base = base / i;
     }
-
-    if (base % i != 0) continue;
 
     var current = Math.floor(callPrime(number, i) / p);
     primeNumbers.push(current);
