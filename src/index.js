@@ -1,30 +1,32 @@
 module.exports = function getZerosCount(number, base) {
-  //var arr = [];
-  //var el = 0;
 
-  //while (number != 0) {
-    //el = number % base;
-    //arr.push(el);
-    //number = Math.floor(number / base);
-  //} 
+  function callPrime(a, b) {
+    var result = 0;
+    while (a > 0) {
+      a = Math.floor(a / b);
+      result += a;
+    }
+  return result;
+  }
 
-  //var newNumber = +arr.reverse().join('');
- 
- 
-//return Math.floor(newNumber / 5);
-var arr =[];
-var count = 0;
-var fact = 0;
+  var primeNumbers =[];
+  var p = 0;
 
-for (var i = 1; i <= number; i++) {
-  fact = fact * i;
+  for (var i = 2; i <= Math.sqrt(base); i++) {
+    if (base % i != 0) continue;
+    while (base % i == 0) {
+      p++;
+      base = base / i;
+    }
+
+    var current = Math.floor(callPrime(number, i) / p);
+    primeNumbers.push(current);
+  }
+  
+  if (base > 1) primeNumbers.push(callPrime(number, base));
+
+  return Math.min( ...primeNumbers);
+
 }
 
-var result = fact.toString(base);
-
-var count = result.length - result.split('').reverse(). join('').length;
-
-return count;
-
-}
 
